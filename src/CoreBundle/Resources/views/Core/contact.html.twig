@@ -1,0 +1,15 @@
+{% extends "CoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Page de contact</h2>
+  {% for message in app.session.flashbag.get('info') %}
+       {{ message }}
+  {% endfor %}
+  <hr>
+  
+{% endblock %}
