@@ -575,7 +575,7 @@
                   <tag name="cache.pool"/>
                   <argument>a6ThV+EnGq</argument>
                   <argument>0</argument>
-                  <argument>WZ0ENAsXfR1cf9a3g-rLKw</argument>
+                  <argument>uBrJTzk+zHWTlIii4XeuqQ</argument>
                   <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -588,7 +588,7 @@
                   <tag name="cache.pool"/>
                   <argument>48ZPIJ8O6Q</argument>
                   <argument>0</argument>
-                  <argument>WZ0ENAsXfR1cf9a3g-rLKw</argument>
+                  <argument>uBrJTzk+zHWTlIii4XeuqQ</argument>
                   <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -920,7 +920,7 @@
       <tag name="cache.pool"/>
       <argument>Fc0El9Z6fN</argument>
       <argument>0</argument>
-      <argument>WZ0ENAsXfR1cf9a3g-rLKw</argument>
+      <argument>uBrJTzk+zHWTlIii4XeuqQ</argument>
       <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1195,6 +1195,8 @@
               <argument key="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator">security.validator.user_password</argument>
               <argument key="doctrine.orm.validator.unique">doctrine.orm.validator.unique</argument>
               <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator">doctrine.orm.validator.unique</argument>
+              <argument key="oc_platform_antiflood">oc_platform.validator.antiflood</argument>
+              <argument key="OC\PlatformBundle\Validator\AntifloodValidator">oc_platform.validator.antiflood</argument>
             </argument>
           </service>
         </argument>
@@ -1673,7 +1675,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>582445f86bf3a3.81137425</argument>
+            <argument>583c52c9954454.05625715</argument>
           </service>
         </argument>
       </argument>
@@ -1807,7 +1809,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>582445f86bf3a3.81137425</argument>
+            <argument>583c52c9954454.05625715</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2377,6 +2379,11 @@
     <service id="oc_platform.doctrine_listener.application_creation" class="OC\PlatformBundle\DoctrineListener\ApplicationCreationListener">
       <tag name="doctrine.event_listener" event="postPersist"/>
       <argument type="service" id="oc_platform.email.application_mailer"/>
+    </service>
+    <service id="oc_platform.validator.antiflood" class="OC\PlatformBundle\Validator\AntifloodValidator">
+      <tag name="validator.constraint_validator" alias="oc_platform_antiflood"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
     <service id="assetic.filter_manager" class="Symfony\Bundle\AsseticBundle\FilterManager">
       <argument type="service" id="service_container"/>

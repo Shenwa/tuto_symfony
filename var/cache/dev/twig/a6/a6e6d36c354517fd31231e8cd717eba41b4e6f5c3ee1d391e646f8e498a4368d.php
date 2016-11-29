@@ -15,8 +15,8 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a9b456ceae4c500d1cb8fc374b8495ce9eafbfbe223a4fde2bd0b61b631547fa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a9b456ceae4c500d1cb8fc374b8495ce9eafbfbe223a4fde2bd0b61b631547fa->enter($__internal_a9b456ceae4c500d1cb8fc374b8495ce9eafbfbe223a4fde2bd0b61b631547fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:form.html.twig"));
+        $__internal_0f0d01f065343b45b85d3c196faad95b06f4f67a1fab5c4b24413397a3b512a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0f0d01f065343b45b85d3c196faad95b06f4f67a1fab5c4b24413397a3b512a5->enter($__internal_0f0d01f065343b45b85d3c196faad95b06f4f67a1fab5c4b24413397a3b512a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:form.html.twig"));
 
         // line 2
         echo "
@@ -74,9 +74,13 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
         // line 29
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "content", array()), 'label', array("label_attr" => array("class" => "col-sm-2 control-label"), "label" => "Contenu de l'annonce"));
         echo "
+    ";
+        // line 30
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "content", array()), 'errors');
+        echo "
     <div class=\"col-sm-10\">
       ";
-        // line 31
+        // line 32
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "content", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
     </div>
@@ -84,63 +88,63 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
 
   <div class=\"form-group\">
     ";
-        // line 36
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "author", array()), 'label', array("label_attr" => array("class" => "col-sm-2 control-label"), "label" => "Author"));
         echo "
     <div class=\"col-sm-10\">
       ";
-        // line 38
+        // line 39
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "author", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
     </div>
   </div>
   ";
-        // line 41
+        // line 42
         if ($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "published", array(), "any", true, true)) {
-            // line 42
+            // line 43
             echo "    ";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "published", array()), 'label', array("label_attr" => array("class" => "col-sm-2 control-label"), "label" => "Published"));
             echo "
     ";
-            // line 43
+            // line 44
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "published", array()), 'widget', array("attr" => array("class" => "checkbox")));
             echo "
   ";
         }
-        // line 45
+        // line 46
         echo "  <div class=\"form-group\">
     ";
-        // line 46
+        // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "image", array()), "file", array()), 'label', array("label_attr" => array("class" => "col-sm-2 control-label"), "label" => "Image"));
         echo "
     <div class=\"col-sm-10\">
       ";
-        // line 48
+        // line 49
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "image", array()), "file", array()), 'widget', array("attr" => array("class" => "")));
         echo "
     </div>
   </div>
   <div class=\"form-group\">
     ";
-        // line 52
+        // line 53
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
   </div>
   <br>
   ";
-        // line 56
+        // line 57
         echo "  ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
 
   ";
-        // line 61
+        // line 62
         echo "  ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
   ";
-        // line 64
+        // line 65
         echo "  ";
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -153,7 +157,7 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
 </script>
 ";
         
-        $__internal_a9b456ceae4c500d1cb8fc374b8495ce9eafbfbe223a4fde2bd0b61b631547fa->leave($__internal_a9b456ceae4c500d1cb8fc374b8495ce9eafbfbe223a4fde2bd0b61b631547fa_prof);
+        $__internal_0f0d01f065343b45b85d3c196faad95b06f4f67a1fab5c4b24413397a3b512a5->leave($__internal_0f0d01f065343b45b85d3c196faad95b06f4f67a1fab5c4b24413397a3b512a5_prof);
 
     }
 
@@ -169,7 +173,7 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
 
     public function getDebugInfo()
     {
-        return array (  144 => 64,  138 => 61,  132 => 56,  126 => 52,  119 => 48,  114 => 46,  111 => 45,  106 => 43,  101 => 42,  99 => 41,  93 => 38,  88 => 36,  80 => 31,  75 => 29,  72 => 28,  64 => 23,  59 => 20,  54 => 19,  51 => 17,  48 => 15,  42 => 13,  39 => 12,  33 => 9,  28 => 6,  22 => 2,);
+        return array (  148 => 65,  142 => 62,  136 => 57,  130 => 53,  123 => 49,  118 => 47,  115 => 46,  110 => 44,  105 => 43,  103 => 42,  97 => 39,  92 => 37,  84 => 32,  79 => 30,  75 => 29,  72 => 28,  64 => 23,  59 => 20,  54 => 19,  51 => 17,  48 => 15,  42 => 13,  39 => 12,  33 => 9,  28 => 6,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -211,6 +215,7 @@ class __TwigTemplate_72f73d6cbaea04f2f188a830e2014119cce11c3f95b26557d4635e47f77
   {# Idem pour un autre champ. #}
   <div class=\"form-group\">
     {{ form_label(form.content, \"Contenu de l'annonce\", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.content) }}
     <div class=\"col-sm-10\">
       {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
     </div>
