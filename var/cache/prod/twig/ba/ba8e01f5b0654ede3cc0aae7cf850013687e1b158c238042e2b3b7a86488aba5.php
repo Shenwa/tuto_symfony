@@ -31,11 +31,11 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
         // line 9
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-
+  <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>
   ";
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 19
+        // line 20
         echo "</head>
 
 <body>
@@ -58,30 +58,30 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
         <h3>Les annonces</h3>
         <ul class=\"nav nav-pills nav-stacked\">
           <li><a href=\"";
-        // line 40
+        // line 41
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_home");
         echo "\">Accueil</a></li>
           <li><a href=\"";
-        // line 41
+        // line 42
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_add");
         echo "\">Ajouter une annonce</a></li>
           <li><a href=\"";
-        // line 42
+        // line 43
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("core_contact");
         echo "\">Contact</a></li>
         </ul>
 
         <h4>Dernières annonces</h4>
         ";
-        // line 46
+        // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("OCPlatformBundle:Advert:menu", array("limit" => 3)));
         echo "
       </div>
       <div id=\"content\" class=\"col-md-9\">
         ";
-        // line 49
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 52
         echo "      </div>
     </div>
 
@@ -89,14 +89,14 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
 
     <footer>
       <p>The sky's the limit © ";
-        // line 57
+        // line 58
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " and beyond.</p>
     </footer>
   </div>
 
   ";
-        // line 61
+        // line 62
         $this->displayBlock('javascripts', $context, $blocks);
         // line 70
         echo "
@@ -116,64 +116,74 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
         // line 12
         echo "    ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
-            // asset "46418f1_0"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_46418f1_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/46418f1_bootstrap-datepicker_1.css");
-            // line 14
+            // asset "b131801_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_b131801_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/b131801_bootstrap-datepicker_1.css");
+            // line 15
+            echo "        <link rel=\"stylesheet\" href=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
+            echo "\" type=\"text/css\" />
+    ";
+            // asset "b131801_1"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_b131801_1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/b131801_bootstrap-multiselect_2.css");
             echo "        <link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\" type=\"text/css\" />
     ";
         } else {
-            // asset "46418f1"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_46418f1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/46418f1.css");
+            // asset "b131801"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_b131801") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/b131801.css");
             echo "        <link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\" type=\"text/css\" />
     ";
         }
         unset($context["asset_url"]);
-        // line 16
-        echo "    ";
         // line 17
-        echo "    <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css\">
+        echo "    ";
+        // line 18
+        echo "    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
   ";
     }
 
-    // line 49
+    // line 50
     public function block_body($context, array $blocks = array())
     {
-        // line 50
+        // line 51
         echo "        ";
     }
 
-    // line 61
+    // line 62
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 62
+        // line 63
         echo "    ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
-            // asset "98c29e8_0"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_98c29e8_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/98c29e8_bootstrap-datepicker_1.js");
-            // line 63
+            // asset "487a99c_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_487a99c_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/487a99c_bootstrap-datepicker_1.js");
+            // line 65
+            echo "        <script type=\"text/javascript\" src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
+            echo "\"></script>
+    ";
+            // asset "487a99c_1"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_487a99c_1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/487a99c_bootstrap-multiselect_2.js");
             echo "        <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\"></script>
     ";
         } else {
-            // asset "98c29e8"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_98c29e8") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/98c29e8.js");
+            // asset "487a99c"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_487a99c") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/487a99c.js");
             echo "        <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\"></script>
     ";
         }
         unset($context["asset_url"]);
-        // line 65
+        // line 67
         echo "    ";
-        // line 66
-        echo "    <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>
-    <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>
-    <script>\$('.datepicker').datepicker();</script>
+        // line 68
+        echo "    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
   ";
     }
 
@@ -189,7 +199,7 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
 
     public function getDebugInfo()
     {
-        return array (  174 => 66,  172 => 65,  158 => 63,  153 => 62,  150 => 61,  146 => 50,  143 => 49,  138 => 17,  136 => 16,  122 => 14,  117 => 12,  114 => 11,  108 => 9,  102 => 70,  100 => 61,  93 => 57,  85 => 51,  83 => 49,  77 => 46,  70 => 42,  66 => 41,  62 => 40,  39 => 19,  37 => 11,  32 => 9,  23 => 2,);
+        return array (  186 => 68,  184 => 67,  164 => 65,  159 => 63,  156 => 62,  152 => 51,  149 => 50,  144 => 18,  142 => 17,  122 => 15,  117 => 12,  114 => 11,  108 => 9,  102 => 70,  100 => 62,  93 => 58,  85 => 52,  83 => 50,  77 => 47,  70 => 43,  66 => 42,  62 => 41,  39 => 20,  37 => 11,  32 => 9,  23 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -47,10 +47,10 @@ class __TwigTemplate_4fa296feea465df338951ea6f68bdcb56abe5373ff273c4b775e77c1945
         if ( !(null === $this->getAttribute((isset($context["advert"]) ? $context["advert"] : null), "image", array()))) {
             // line 13
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : null), "image", array()), "url", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl($this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : null), "image", array()), "webPath", array())), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : null), "image", array()), "alt", array()), "html", null, true);
-            echo "\">
+            echo "\" />
   ";
         }
         // line 15

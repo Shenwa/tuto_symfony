@@ -3,18 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Form/AdvertType.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/config/services.yml</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Controller/AdvertController.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Form/AdvertEditType.php</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Repository/UserRepository.php</file>
+            <file>file:/D:/wamp/www/Symfony/app/config/security.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/OCUserBundle.php</file>
             <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/config/routing.yml</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/views/Advert/form.html.twig</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Entity/Advert.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/views/Advert/delete.html.twig</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/views/Advert/add.html.twig</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Form/ImageType.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Validator/Antiflood.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Validator/AntifloodValidator.php</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Entity/User.php</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Resources/views/layout.html.twig</file>
+            <file>file:/D:/wamp/www/Symfony/app/config/routing.yml</file>
         </group>
     </open-files>
 </project-private>

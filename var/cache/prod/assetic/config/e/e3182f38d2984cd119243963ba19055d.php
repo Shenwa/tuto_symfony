@@ -2,11 +2,12 @@
 
 // ::layout.html.twig
 return array (
-  '46418f1' => 
+  'b131801' => 
   array (
     0 => 
     array (
       0 => 'css/bootstrap-datepicker.css',
+      1 => 'css/bootstrap-multiselect.css',
     ),
     1 => 
     array (
@@ -14,8 +15,8 @@ return array (
     ),
     2 => 
     array (
-      'output' => 'css/46418f1.css',
-      'name' => '46418f1',
+      'output' => 'css/b131801.css',
+      'name' => 'b131801',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 
@@ -23,19 +24,20 @@ return array (
       ),
     ),
   ),
-  '98c29e8' => 
+  '487a99c' => 
   array (
     0 => 
     array (
       0 => 'js/bootstrap-datepicker.js',
+      1 => 'js/bootstrap-multiselect.js',
     ),
     1 => 
     array (
     ),
     2 => 
     array (
-      'output' => 'js/98c29e8.js',
-      'name' => '98c29e8',
+      'output' => 'js/487a99c.js',
+      'name' => '487a99c',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 

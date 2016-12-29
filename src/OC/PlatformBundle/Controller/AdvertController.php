@@ -24,6 +24,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AdvertController extends Controller
 {
@@ -90,8 +91,11 @@ class AdvertController extends Controller
     ));
   }
 
+  /**
+   * @Security("has_role('ROLE_AUTEUR')")
+   */
   public function addAction(Request $request)
-  {
+  { 
     $advert = new Advert();
     $form   = $this->get('form.factory')->create(AdvertType::class, $advert);
 

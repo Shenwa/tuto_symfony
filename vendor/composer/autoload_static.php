@@ -58,6 +58,10 @@ class ComposerStaticInit4d0a9de84cb19f24b0c6e13779579dd0
         array (
             'Incenteev\\ParameterHandler\\' => 27,
         ),
+        'F' => 
+        array (
+            'FOS\\UserBundle\\' => 15,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -167,6 +171,10 @@ class ComposerStaticInit4d0a9de84cb19f24b0c6e13779579dd0
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
         ),
+        'FOS\\UserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -267,8 +275,8 @@ class ComposerStaticInit4d0a9de84cb19f24b0c6e13779579dd0
     );
 
     public static $classMap = array (
-        'AppCache' => __DIR__ . '/../..' . '/../symfony/app/AppCache.php',
-        'AppKernel' => __DIR__ . '/../..' . '/../symfony/app/AppKernel.php',
+        'AppCache' => __DIR__ . '/../..' . '/app/AppCache.php',
+        'AppKernel' => __DIR__ . '/../..' . '/app/AppKernel.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Collator' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Collator.php',
