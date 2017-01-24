@@ -90,6 +90,11 @@ class Advert
     private $categories;
     
     /**
+    * @ORM\OneToOne(targetEntity="OC\UserBundle\Entity\User")
+   */
+    private $user;
+    
+    /**
    * @ORM\OneToMany(targetEntity="OC\PlatformBundle\Entity\Application", mappedBy="advert")
    */
     private $applications; // Notez le « s », une annonce est liée à plusieurs candidatures
@@ -273,6 +278,16 @@ class Advert
     public function getImage()
     {
         return $this->image;
+    }
+    
+    /**
+     * Get user
+     *
+     * @return \OC\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 
     /**

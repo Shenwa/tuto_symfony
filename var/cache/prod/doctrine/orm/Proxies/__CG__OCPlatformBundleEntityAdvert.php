@@ -64,10 +64,10 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'slug', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'image', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'categories', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'applications', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'updatedAt', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'nbApplications'];
+            return ['__isInitialized__', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'slug', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'image', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'categories', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'user', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'applications', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'updatedAt', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'nbApplications'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'slug', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'image', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'categories', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'applications', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'updatedAt', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'nbApplications'];
+        return ['__isInitialized__', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'slug', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'id', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'date', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'title', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'author', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'content', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'published', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'image', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'categories', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'user', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'applications', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'updatedAt', '' . "\0" . 'OC\\PlatformBundle\\Entity\\Advert' . "\0" . 'nbApplications'];
     }
 
     /**
@@ -340,6 +340,17 @@ class Advert extends \OC\PlatformBundle\Entity\Advert implements \Doctrine\ORM\P
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImage', []);
 
         return parent::getImage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUser()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUser', []);
+
+        return parent::getUser();
     }
 
     /**

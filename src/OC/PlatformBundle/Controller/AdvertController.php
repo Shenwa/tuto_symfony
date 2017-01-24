@@ -25,6 +25,10 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use OC\PlatformBundle\Event\PlatformEvents;
+use OC\PlatformBundle\Event\MessagePostEvent;
+
+
 
 class AdvertController extends Controller
 {
@@ -183,6 +187,13 @@ class AdvertController extends Controller
       // Tout l'intérêt est ici : le contrôleur passe
       // les variables nécessaires au template !
       'listAdverts' => $listAdverts
+    ));
+  }
+  
+  public function translationAction($name)
+  {
+    return $this->render('OCPlatformBundle:Advert:translation.html.twig', array(
+      'name' => $name
     ));
   }
   

@@ -4,12 +4,23 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Repository/UserRepository.php</file>
-            <file>file:/D:/wamp/www/Symfony/app/config/security.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Beta/BetaHTMLAdder.php</file>
+            <file>file:/D:/wamp/www/Symfony/app/config/routing_dev.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Controller/AdvertController.php</file>
             <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/OCUserBundle.php</file>
-            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/config/routing.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/BigBrother/MessageNotification.php</file>
             <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Entity/User.php</file>
             <file>file:/D:/wamp/www/Symfony/src/OC/UserBundle/Resources/views/layout.html.twig</file>
+            <file>file:/D:/wamp/www/Symfony/app/config/config.yml</file>
             <file>file:/D:/wamp/www/Symfony/app/config/routing.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/config/services.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/BigBrother/CensorshipListener.php</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Beta/BetaListener.php</file>
+            <file>file:/D:/wamp/www/Symfony/app/config/security.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/views/Advert/translation.html.twig</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Resources/config/routing.yml</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/BigBrother/MessageListener.php</file>
+            <file>file:/D:/wamp/www/Symfony/src/OC/PlatformBundle/Twig/AntispamExtension.php</file>
         </group>
     </open-files>
 </project-private>

@@ -52,36 +52,58 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
         </a>
       </p>
     </div>
-
+      <div class=\"row\">
+          ";
+        // line 37
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 38
+            echo "            Connecté en tant que ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
+            echo "
+            -
+            <a href=\"";
+            // line 40
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
+            echo "\">Déconnexion</a>
+        ";
+        } else {
+            // line 42
+            echo "            <a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
+            echo "\">Connexion</a>
+        ";
+        }
+        // line 44
+        echo "      </div>
     <div class=\"row\">
       <div id=\"menu\" class=\"col-md-3\">
         <h3>Les annonces</h3>
         <ul class=\"nav nav-pills nav-stacked\">
           <li><a href=\"";
-        // line 41
+        // line 49
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_home");
         echo "\">Accueil</a></li>
           <li><a href=\"";
-        // line 42
+        // line 50
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_add");
         echo "\">Ajouter une annonce</a></li>
           <li><a href=\"";
-        // line 43
+        // line 51
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("core_contact");
         echo "\">Contact</a></li>
         </ul>
 
         <h4>Dernières annonces</h4>
         ";
-        // line 47
+        // line 55
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("OCPlatformBundle:Advert:menu", array("limit" => 3)));
         echo "
       </div>
       <div id=\"content\" class=\"col-md-9\">
         ";
-        // line 50
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 52
+        // line 60
         echo "      </div>
     </div>
 
@@ -89,16 +111,16 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
 
     <footer>
       <p>The sky's the limit © ";
-        // line 58
+        // line 66
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " and beyond.</p>
     </footer>
   </div>
 
   ";
-        // line 62
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 70
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 78
         echo "
 </body>
 </html>";
@@ -145,22 +167,22 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
   ";
     }
 
-    // line 50
+    // line 58
     public function block_body($context, array $blocks = array())
     {
-        // line 51
+        // line 59
         echo "        ";
     }
 
-    // line 62
+    // line 70
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 63
+        // line 71
         echo "    ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "487a99c_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_487a99c_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/487a99c_bootstrap-datepicker_1.js");
-            // line 65
+            // line 73
             echo "        <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\"></script>
@@ -180,9 +202,9 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
     ";
         }
         unset($context["asset_url"]);
-        // line 67
+        // line 75
         echo "    ";
-        // line 68
+        // line 76
         echo "    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
   ";
     }
@@ -199,7 +221,7 @@ class __TwigTemplate_94d115437fcb65c93549195fdc52b0c8d16eb493f4e3e700a67ef6abca6
 
     public function getDebugInfo()
     {
-        return array (  186 => 68,  184 => 67,  164 => 65,  159 => 63,  156 => 62,  152 => 51,  149 => 50,  144 => 18,  142 => 17,  122 => 15,  117 => 12,  114 => 11,  108 => 9,  102 => 70,  100 => 62,  93 => 58,  85 => 52,  83 => 50,  77 => 47,  70 => 43,  66 => 42,  62 => 41,  39 => 20,  37 => 11,  32 => 9,  23 => 2,);
+        return array (  208 => 76,  206 => 75,  186 => 73,  181 => 71,  178 => 70,  174 => 59,  171 => 58,  166 => 18,  164 => 17,  144 => 15,  139 => 12,  136 => 11,  130 => 9,  124 => 78,  122 => 70,  115 => 66,  107 => 60,  105 => 58,  99 => 55,  92 => 51,  88 => 50,  84 => 49,  77 => 44,  71 => 42,  66 => 40,  60 => 38,  58 => 37,  39 => 20,  37 => 11,  32 => 9,  23 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

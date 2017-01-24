@@ -639,7 +639,7 @@
                   <tag name="cache.pool"/>
                   <argument>a6ThV+EnGq</argument>
                   <argument>0</argument>
-                  <argument>r4g18tGN4NTdDgJbV1lBnQ</argument>
+                  <argument>-6gHcAx-YnuZXQ7M+XTXSg</argument>
                   <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -652,7 +652,7 @@
                   <tag name="cache.pool"/>
                   <argument>48ZPIJ8O6Q</argument>
                   <argument>0</argument>
-                  <argument>r4g18tGN4NTdDgJbV1lBnQ</argument>
+                  <argument>-6gHcAx-YnuZXQ7M+XTXSg</argument>
                   <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -894,6 +894,7 @@
             <argument>D:\wamp\www\Symfony\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fr.xlf</argument>
             <argument>D:\wamp\www\Symfony\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fr.xlf</argument>
             <argument>D:\wamp\www\Symfony\vendor\symfony\symfony\src\Symfony\Component\Security\Core\Exception/../Resources/translations\security.fr.xlf</argument>
+            <argument>D:\wamp\www\Symfony\src\OC\PlatformBundle/Resources/translations\messages.fr.yml</argument>
             <argument>D:\wamp\www\Symfony\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>D:\wamp\www\Symfony\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
           </argument>
@@ -1303,7 +1304,7 @@
       <tag name="cache.pool"/>
       <argument>Fc0El9Z6fN</argument>
       <argument>0</argument>
-      <argument>r4g18tGN4NTdDgJbV1lBnQ</argument>
+      <argument>-6gHcAx-YnuZXQ7M+XTXSg</argument>
       <argument>D:\wamp\www\Symfony\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1355,6 +1356,7 @@
               <argument key="Symfony\Component\Form\Extension\Core\Type\FormType">form.type.form</argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType">form.type.choice</argument>
               <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType">form.type.entity</argument>
+              <argument key="OC\PlatformBundle\Form\CkeditorType">oc_platform.form.ckeditor</argument>
               <argument key="FOS\UserBundle\Form\Type\UsernameFormType">fos_user.username_form_type</argument>
               <argument key="FOS\UserBundle\Form\Type\ProfileFormType">fos_user.profile.form.type</argument>
               <argument key="FOS\UserBundle\Form\Type\RegistrationFormType">fos_user.registration.form.type</argument>
@@ -1921,6 +1923,22 @@
         <argument>0</argument>
       </call>
       <call method="addListenerService">
+        <argument>kernel.response</argument>
+        <argument type="collection">
+          <argument>oc_platform.beta.listener</argument>
+          <argument>processBeta</argument>
+        </argument>
+        <argument>2</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>oc_platform.post_message</argument>
+        <argument type="collection">
+          <argument>oc_platform.bigbrother.message_listener</argument>
+          <argument>processMessage</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument>assetic.request_listener</argument>
@@ -2096,7 +2114,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5864e54a30cd68.19188372</argument>
+            <argument>5878e5331f6242.57627022</argument>
           </service>
         </argument>
         <argument type="service">
@@ -2117,7 +2135,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5864e54a30cd68.19188372</argument>
+            <argument>5878e5331f6242.57627022</argument>
           </service>
         </argument>
       </argument>
@@ -2292,7 +2310,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5864e54a30cd68.19188372</argument>
+            <argument>5878e5331f6242.57627022</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2445,7 +2463,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5864e54a30cd68.19188372</argument>
+            <argument>5878e5331f6242.57627022</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3038,8 +3056,10 @@
     </service>
     <service id="oc_platform.antispam" class="OC\PlatformBundle\Antispam\OCAntispam">
       <argument type="service" id="swiftmailer.mailer.default"/>
-      <argument>fr</argument>
       <argument>50</argument>
+      <call method="setLocale">
+        <argument>fr</argument>
+      </call>
     </service>
     <service id="oc_platform.email.application_mailer" class="OC\PlatformBundle\Email\ApplicationMailer">
       <argument type="service" id="swiftmailer.mailer.default"/>
@@ -3052,6 +3072,27 @@
       <tag name="validator.constraint_validator" alias="oc_platform_antiflood"/>
       <argument type="service" id="request_stack"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
+    <service id="oc_platform.form.ckeditor" class="OC\PlatformBundle\Form\CkeditorType">
+      <tag name="form.type" alias="ckeditor"/>
+    </service>
+    <service id="oc_platform.beta.html_adder" class="OC\PlatformBundle\Beta\BetaHTMLAdder"/>
+    <service id="oc_platform.beta.listener" class="OC\PlatformBundle\Beta\BetaListener">
+      <tag name="kernel.event_listener" event="kernel.response" method="processBeta" priority="2"/>
+      <argument type="service" id="oc_platform.beta.html_adder"/>
+      <argument>2017-06-01</argument>
+    </service>
+    <service id="oc_platform.bigbrother.message_notificator" class="OC\PlatformBundle\Bigbrother\MessageNotificator">
+      <argument type="service" id="swiftmailer.mailer.default"/>
+    </service>
+    <service id="oc_platform.bigbrother.message_listener" class="OC\PlatformBundle\Bigbrother\MessageListener">
+      <tag name="kernel.event_listener" event="oc_platform.post_message" method="processMessage"/>
+      <argument type="service" id="oc_platform.bigbrother.message_notificator"/>
+      <argument type="collection">
+        <argument>alexandre</argument>
+        <argument>marine</argument>
+        <argument>pierre</argument>
+      </argument>
     </service>
     <service id="assetic.filter_manager" class="Symfony\Bundle\AsseticBundle\FilterManager">
       <argument type="service" id="service_container"/>
